@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+{% load static %}
 {% block head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +14,13 @@ Projects | Shreyash Pandey – Backend Developer
         <h2 class="topic">Recent Projects</h2>
         {% comment %} <a href="{% url 'Project_create' %}">Create New Project</a> {% endcomment %}
         <div class="container_projects">
-            {% for project in projects %}
+            {% comment %} {% for project in projects %}
             <div class="project_card">
 
                 <section class="project" aria-label={{ project.title }}+" Project">
                     <div class="vid">
                         <video src={{ project.video.url }} controls class="vid"
-                            title={{ project.title }} + "application demo video"></video>
+                            title ="application demo video"></video>
                     </div>
                     <div class="inforamtion_about_project">
                         <h3>{{ project.title }}</h3>
@@ -34,12 +35,12 @@ Projects | Shreyash Pandey – Backend Developer
                     </div>
                 </section>
             </div>
-            {% endfor %}
+            {% endfor %} {% endcomment %}
 
 
-                {% comment %} <section class="project" aria-label="Orbit – Student Record Platform Project">
+                <section class="project" aria-label="Orbit – Student Record Platform Project">
                     <div class="vid">
-                        <video src="/resources/orbit.mp4" controls class="vid"
+                        <video src="{% static 'resources/videos/orbit.mp4' %}" controls class="vid"
                             title="Orbit student record platform demo video"></video>
                     </div>
                     <div class="inforamtion_about_project">
@@ -56,23 +57,27 @@ Projects | Shreyash Pandey – Backend Developer
                         
                     </div>
                 </section>
-
-
                 
-                <section class="project" aria-label="ChatBot AI Project">
+                
+                
+                <section class="project" aria-label="Warranty System Project">
                     <div class="vid">
-                        <video src="/resources/chatbot.mp4" controls class="vid"
-                            title="ChatBot AI demo video"></video>
+                        <video src="{% static 'resources/videos/ws.mp4' %}" controls class="vid"
+                        title="Warranty System demo video"></video>
                     </div>
                     <div class="information_about_project">
-                        <h3>ChatBot AI</h3>
+                        <h3>Warranty System</h3>
                         <p>
-                            An AI-powered chatbot designed to provide automated responses and assist users with common queries. 
-                            The chatbot focuses on handling user input, generating relevant replies, and improving interaction flow. 
-                            This project strengthened my skills in <strong>backend logic</strong>, <strong>APIs</strong>, and <strong>AI-driven communication</strong>.
+                            A warranty management system designed to streamline warranty claims and track product warranties. 
+                            The system includes features for managing warranty data, processing claims, and generating reports. 
+                            This project strengthened my skills in <strong>backend logic</strong>, <strong>database design</strong>, and <strong>user interface development</strong>.
                         </p>
+                        <a href="https://github.com/Shreyash0708/Warranty-tracker" target="_blank" rel="noopener">
+                            View on GitHub
+                        </a>
+                        
                     </div>
-                </section> {% endcomment %}
+                </section> 
 
         </div>
     </main>
