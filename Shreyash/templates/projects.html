@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+{% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/projects.css">
+{% endblock %}    
+{% block title %}    
+Projects | Shreyash Pandey – Backend Developer
+{% endblock %}
+
+{% block content %}
+    <main>
+        <h2 class="topic">Recent Projects</h2>
+        {% comment %} <a href="{% url 'Project_create' %}">Create New Project</a> {% endcomment %}
+        <div class="container_projects">
+            {% for project in projects %}
+            <div class="project_card">
+
+                <section class="project" aria-label={{ project.title }}+" Project">
+                    <div class="vid">
+                        <video src={{ project.video.url }} controls class="vid"
+                            title={{ project.title }} + "application demo video"></video>
+                    </div>
+                    <div class="inforamtion_about_project">
+                        <h3>{{ project.title }}</h3>
+                        <p>
+                            {{ project.description }}
+                        </p>
+                    <p><strong>Tech Stack:</strong> {{ project.tech_stack }}</p>
+                        <a href={{ project.github_link }} target="_blank" rel="noopener">
+                            View on GitHub
+                        </a>
+                        
+                    </div>
+                </section>
+            </div>
+            {% endfor %}
+
+
+                {% comment %} <section class="project" aria-label="Orbit – Student Record Platform Project">
+                    <div class="vid">
+                        <video src="/resources/orbit.mp4" controls class="vid"
+                            title="Orbit student record platform demo video"></video>
+                    </div>
+                    <div class="inforamtion_about_project">
+                        <h3>Orbit – Student Record Platform</h3>
+                        <p>
+                            Orbit is a student record management platform built to organize and manage academic and personal student data efficiently. 
+                            It enables structured storage of student records, easy retrieval, and smooth data handling. 
+                            The project highlights <strong>backend development</strong>, <strong>database design</strong>, and <strong>scalable data management</strong>.
+                        </p>
+                        <p><strong>Tech Stack:</strong> Python, Django, HTML, CSS, JavaScript, SQLite</p>
+                        <a href="https://github.com/Shreyash0708/orbit" target="_blank" rel="noopener">
+                            View on GitHub
+                        </a>
+                        
+                    </div>
+                </section>
+
+
+                
+                <section class="project" aria-label="ChatBot AI Project">
+                    <div class="vid">
+                        <video src="/resources/chatbot.mp4" controls class="vid"
+                            title="ChatBot AI demo video"></video>
+                    </div>
+                    <div class="information_about_project">
+                        <h3>ChatBot AI</h3>
+                        <p>
+                            An AI-powered chatbot designed to provide automated responses and assist users with common queries. 
+                            The chatbot focuses on handling user input, generating relevant replies, and improving interaction flow. 
+                            This project strengthened my skills in <strong>backend logic</strong>, <strong>APIs</strong>, and <strong>AI-driven communication</strong>.
+                        </p>
+                    </div>
+                </section> {% endcomment %}
+
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+            document.querySelectorAll('.bt')[0].classList.toggle('active');
+    }
+    </script>
+{% endblock %}    
+    
+    

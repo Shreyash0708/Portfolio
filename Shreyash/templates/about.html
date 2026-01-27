@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Shreyash Pandey, a Computer Science engineering student focused on backend development using Python and Flask.">
+    <meta name="keywords" content="Backend Developer, Python Developer, Flask, Computer Science Student, Portfolio">
+    <link rel="stylesheet" href="/static/css/about.css">
+{% endblock %}
+{% block title %}
+About Me | Shreyash Pandey – Backend Developer
+{% endblock %}
+ 
+{% block content %}
+<main>
+
+  <section id="about">
+    <div class="container3">
+        <div class="picture">
+            <img src="/resources/my.png" 
+                 alt="Shreyash Pandey backend developer profile photo" 
+                 class="pic">
+        </div>
+
+        <div class="info">
+            <h1>About Me</h1>
+
+            <p>
+              I’m a Computer Science engineering student with a strong interest in
+              backend development and web technologies. I enjoy building structured,
+              efficient, and scalable web applications.
+            </p>
+
+            <p>
+              My primary focus is on Python-based backend development using Flask.
+              I believe in learning by building real-world projects and continuously
+              improving my technical skills.
+            </p>
+
+            <p>
+              I’m motivated, consistent, and always open to learning new technologies.
+              My goal is to grow as a backend developer and contribute to meaningful
+              projects while continuously improving my skills.
+            </p>
+
+            <h2>What I'm Working On</h2>
+            <ul>
+                <li>Python & Flask backend development</li>
+                <li>SQL & database design</li>
+                <li>Real-world projects</li>
+            </ul>
+
+            <h2>Background</h2>
+            <p>
+              I am currently pursuing a B.Tech in Computer Science. I have a solid
+              foundation in HTML, CSS, and Python, and I am actively expanding my
+              backend development skill set.
+            </p>
+
+            <a href="{% url 'contact' %}" class="a">Let’s Connect</a>
+        </div>
+    </div>
+  </section>
+
+</main>
+<script>
+        function toggleMenu() {
+            document.querySelectorAll('.bt')[0].classList.toggle('active');
+    }
+    </script>
+    
+</div>
+{% endblock %}

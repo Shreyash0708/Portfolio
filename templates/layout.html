@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+    <title>
+        {% block title %}My Portfolio{% endblock title %}
+    </title>
+    
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">
+            <img src="/resources/loho.png" alt="clean" class="loho">
+        </div>
+        {% block dark %}
+        {% endblock %}
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="bt">
+            <ul>
+                <li id="btn">
+                    <a href="{% url 'index' %}" class="a" >Home</a>
+                    <a href="{% url 'about' %}" class="a" >About</a>
+                    <a href="{% url 'projects' %}" class="a">projects</a>
+                    <a href="{% url 'skillset' %}" class="a">skillset</a>
+                    <a href="{% url 'contact' %}" class="a">contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="bt">
+            <ul>
+                <li id="inst">
+                    <a href= "https://www.instagram.com/_Shreyash0708_/" class="b"><img src="/resources/instagram.png" class="instant"></a>
+                    <a href="https://github.com/Shreyash0708" class="b"><img src="/resources/git.jpg" alt=""  class="instant"></a>
+                    <a href="https://www.linkedin.com/in/shreyash-pandey-823b27320/"  class="b"><img src="/resources/linkedlin.webp" class="instant"alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    {% block content %}
+    sorry
+    {% endblock %}
+    <div class="footer">
+    
+        <p class="foot">&copy; 2024 Your Name. All rights reserved.</p>
+    
+    </div>
+    
+</body>
+</html>

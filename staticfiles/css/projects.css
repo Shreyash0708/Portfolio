@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --nav-bg: #000000;
+    --nav-text: #ffffff;
+}
+
+.dark-mode {
+    --bg-color: #0f0f0f;
+    --text-color: #f5f5f5;
+    --nav-bg: #000000;
+    --nav-text: #ffffff;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.nav {
+    background-color: var(--nav-bg);
+}
+
+.a {
+    color: var(--nav-text);
+}
+.theme-toggle {
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    margin-left: 15px;
+    user-select: none;
+}
+
+/* Keep it visible on mobile */
+@media (max-width: 768px) {
+    .theme-toggle {
+        position: absolute;
+        right: 60px; /* next to hamburger */
+        top: 25px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .nav {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    li {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+        z-index: 1000;
+    }
+
+    .bt {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bt.active {
+        display: flex;
+    }
+
+    .nav {
+        position: relative;
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 15px;
+    }
+}
+
+.nav{
+    background-color: #000000;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    padding: 14px 16px;
+    align-items: center;
+        height: 80px;
+}   
+.bt{
+    display: flex;
+    justify-content: space-between;
+    
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.loho{
+    width: 66px;
+    height: 66px;
+    display: flex;
+    border-radius: 50%;
+}
+li{
+    display: flex;
+    gap: 26px;
+}
+.a{
+    color: white;
+    font-size: larger;
+    text-decoration: none;
+    marker: none;
+}
+.b{
+    color: white;
+    text-decoration: none;
+    marker: none;
+    display: flex;
+    width: 27px;
+    height: 42px;
+}
+
+.btn{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+
+}
+.instant{
+    height: 51px;
+    width: auto;
+}
+.container_projects{
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px;
+    /* background-color: gray; */
+    border-radius: 1%;
+
+}
+.topic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 29px 0px -13px 0px;
+}
+.project{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.vid{
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 9px;
+}
+
+@media (max-width: 992px) {
+    .project {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .information_about_project {
+        width: 100%;
+    }
+
+    .project .vid {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .project {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .information_about_project h3 {
+        font-size: 1.3rem;
+    }
+
+    .information_about_project p {
+        font-size: 0.95rem;
+    }
+
+    .information_about_project a {
+        font-size: 0.95rem;
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+}   
+.footer{
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foot{
+    color: white;
+}
