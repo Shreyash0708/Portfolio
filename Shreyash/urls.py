@@ -8,7 +8,7 @@ urlpatterns = [
     # path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path("contact/", views.contact_view, name="contact"),
-    path('projects/', views.Project_list, name='projects'),
+    path('projects/', views.projects, name='projects'),
     path('skillset/', views.skillset, name='skillset'),
     
 

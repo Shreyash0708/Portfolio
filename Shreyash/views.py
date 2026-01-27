@@ -7,9 +7,9 @@ from django.conf import settings
 from django.shortcuts import redirect, get_object_or_404
 
 
-def Project_list(request):
-    projects = project.objects.all().order_by('title')
-    return render(request, 'projects.html', {'projects': projects})
+# def Project_list(request):
+#     projects = projects.objects.all().order_by('title')
+#     return render(request, 'projects.html', {'projects': projects})
 
 def contact_view(request):
     if request.method == "POST":
@@ -46,3 +46,5 @@ def contact(request):
     return render(request, 'contact.html')
 def skillset(request):
     return render(request, 'skillset.html')
+def projects(request):
+    return render(request, 'projects.html')
