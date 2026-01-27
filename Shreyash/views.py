@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.core.mail import send_mail
 from django.shortcuts import render
 from django.conf import settings
-from .models import project, skill
-from .forms import ProjectForm, SkillForm
+# from .models import project
+# from .forms import ProjectForm, SkillForm
 from django.shortcuts import redirect, get_object_or_404
 
 
