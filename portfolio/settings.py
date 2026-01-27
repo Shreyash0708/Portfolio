@@ -140,6 +140,7 @@ if not DEBUG:
         "default-src": ("'self'",),
     }
 
+ALLOWED_HOSTS = ['portfolio-shreyash.onrender.com', 'localhost', '127.0.0.1']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
