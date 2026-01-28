@@ -11,32 +11,32 @@ from django.shortcuts import redirect, get_object_or_404
 #     projects = projects.objects.all().order_by('title')
 #     return render(request, 'projects.html', {'projects': projects})
 
-def contact_view(request):
-    if request.method == "POST":
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
+# def contact_view(request):
+#     if request.method == "POST":
+#         name = request.POST.get('name')
+#         email = request.POST.get('email')
+#         message = request.POST.get('message')
 
-        subject = f"New Contact Message from {name}"
-        full_message = f"""
-        Name: {name}
-        Email: {email}
+#         subject = f"New Contact Message from {name}"
+#         full_message = f"""
+#         Name: {name}
+#         Email: {email}
 
-        Message:
-        {message}
-        """
+#         Message:
+#         {message}
+#         """
 
-        send_mail(
-            subject,
-            full_message,
-            settings.EMAIL_HOST_USER,   # from
-            [settings.EMAIL_HOST_USER], # to (your email)
-            fail_silently=False,
-        )
+#         send_mail(
+#             subject,
+#             full_message,
+#             settings.EMAIL_HOST_USER,   # from
+#             [settings.EMAIL_HOST_USER], # to (your email)
+#             fail_silently=False,
+#         )
 
-        return render(request, 'contact.html', {'success': True})
+#         return render(request, 'contact.html', {'success': True})
 
-    return render(request, 'contact.html')
+#     return render(request, 'contact.html')
 
 def index(request):
     return render(request, 'index.html')
