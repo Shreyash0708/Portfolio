@@ -265,29 +265,38 @@ li{
 /* MOBILE ONLY */
 @media (max-width: 768px) {
     
-    /* Hide the links by default */
+/* PASTE THIS INSIDE YOUR @media (max-width: 768px) SECTION */
+
     #nav-links {
-        display: none; 
-        
-        /* Optional: Style it to look like a dropdown */
+        /* 1. Positioning */
+        display: none;      /* Hidden by default, JS toggles this */
         position: absolute;
-        top: 60px; /* Adjust based on navbar height */
-        right: 0;
-        background-color: #333; /* Dark background */
+        top: 60px;          /* Pushes it below the navbar header */
+        left: 0;
         width: 100%;
-        text-align: center;
+        
+        /* 2. Appearance */
+        background-color: #222; /* Dark background */
         padding: 20px 0;
-        z-index: 9999;
+        z-index: 9999;      /* Forces it on top of everything */
     }
 
-    /* Make the links stack vertically */
+    /* FIX THE "THIN BAR" ISSUE */
+    /* Since all your links are in one <li>, we target the list item directly */
     #nav-links ul li {
         display: flex;
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;    /* Centers them */
+        flex-direction: column; /* STACKS LINKS VERTICALLY */
+        align-items: center;    /* Centers text */
+        gap: 20px;              /* Adds space between links */
         width: 100%;
-        padding: 0;
+    }
+
+    /* FIX THE "INVISIBLE TEXT" ISSUE */
+    #nav-links a {
+        color: white !important; /* Forces text to be white */
+        font-size: 1.2rem;       /* Makes text bigger/easier to tap */
+        display: block;
+        text-decoration: none;
     }
 
     /* Make sure the toggle button is visible */
@@ -295,12 +304,5 @@ li{
         display: block;
         cursor: pointer;
         font-size: 24px;
-    }
-}
-@media (max-width: 768px) {
-    #nav-links a {
-        color: white !important; /* Forces text to be visible */
-        display: block;          /* Makes the whole area clickable */
-        padding: 10px 0;         /* Adds space so they aren't squashed */
     }
 }
