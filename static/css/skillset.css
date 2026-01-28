@@ -319,3 +319,19 @@ li{
         font-size: 24px;
     }
 }
+/* DESKTOP: Align text and icons side-by-side */
+#nav-links {
+    display: flex;
+    align-items: center; /* This forces icons and text to be vertically centered */
+    gap: 30px;           /* Adds space between the "Contact" link and the Instagram icon */
+}
+/* MOBILE: Stack them and add the gap back */
+@media (max-width: 768px) {
+    .social-list {
+        margin-top: 20px; /* Only push them down on phone screens! */
+    }
+    
+    #nav-links {
+        flex-direction: column; /* Ensure they stack vertically on mobile */
+    }
+}
