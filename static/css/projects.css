@@ -261,7 +261,7 @@ li{
         width: 100%;
         text-align: center;
         padding: 20px 0;
-        z-index: 1000;
+        z-index: 9999;
     }
 
     /* Make the links stack vertically */
