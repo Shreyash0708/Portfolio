@@ -19,26 +19,43 @@
         {% block dark %}
         {% endblock %}
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <div class="bt" id="nav-links">
-            <ul>
-                <li id="btn">
-                    <a href="{% url 'index' %}" class="a" >Home</a>
-                    <a href="{% url 'about' %}" class="a" >About</a>
-                    <a href="{% url 'projects' %}" class="a">projects</a>
-                    <a href="{% url 'skillset' %}" class="a">skillset</a>
-                    <a href="{% url 'contact' %}" class="a">contact</a>
-                </li>
-            </ul>
-        </div>
-        <div class="bt">
-            <ul style="margin-top: 20px;">
-                <li id="inst">
-                    <a href= "https://www.instagram.com/_Shreyash0708_/" class="b"><img src="{% static 'resources/instagram.png' %}" class="instant"></a>
-                    <a href="https://github.com/Shreyash0708" class="b"><img src="{% static 'resources/git.jpg' %}" alt=""  class="instant"></a>
-                    <a href="https://www.linkedin.com/in/shreyash-pandey-823b27320/"  class="b"><img src="{% static 'resources/linkedlin.webp' %}" class="instant"alt=""></a>
-                </li>
-            </ul>
-        </div>
+        <nav class="nav">
+    <div class="logo">
+        <img src="{% static 'resources/loho.png' %}" alt="clean" class="loho">
+    </div>
+    
+    {% block dark %}
+    {% endblock %}
+    
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="bt" id="nav-links">
+        
+        <ul>
+            <li id="btn">
+                <a href="{% url 'index' %}" class="a">Home</a>
+                <a href="{% url 'about' %}" class="a">About</a>
+                <a href="{% url 'projects' %}" class="a">projects</a>
+                <a href="{% url 'skillset' %}" class="a">skillset</a>
+                <a href="{% url 'contact' %}" class="a">contact</a>
+            </li>
+        </ul>
+
+        <ul style="margin-top: 20px;">
+            <li id="inst" style="display: flex; gap: 15px; justify-content: center;">
+                <a href="https://www.instagram.com/_Shreyash0708_/" class="b">
+                    <img src="{% static 'resources/instagram.png' %}" class="instant">
+                </a>
+                <a href="https://github.com/Shreyash0708" class="b">
+                    <img src="{% static 'resources/git.jpg' %}" alt="" class="instant">
+                </a>
+                <a href="https://www.linkedin.com/in/shreyash-pandey-823b27320/" class="b">
+                    <img src="{% static 'resources/linkedlin.webp' %}" class="instant" alt="">
+                </a>
+            </li>
+        </ul>
+
+    </div>
     </nav>
     {% block content %}
     sorry
