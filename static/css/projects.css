@@ -246,3 +246,35 @@ li{
 .foot{
     color: white;
 }
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+    
+    /* Hide the links by default */
+    #nav-links {
+        display: none; 
+        
+        /* Optional: Style it to look like a dropdown */
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        right: 0;
+        background-color: #333; /* Dark background */
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    /* Make the links stack vertically */
+    #nav-links ul li {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Make sure the toggle button is visible */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
