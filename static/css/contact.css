@@ -113,6 +113,9 @@ body {
     justify-content: space-around;
     padding: 14px 16px;
     align-items: center;
+    position: relative; /* or fixed/sticky */
+    z-index: 9999;
+
         height: 80px;
 }   
 .bt{
@@ -296,6 +299,9 @@ li{
         display: flex;
         flex-direction: column;
         gap: 15px;
+        align-items: center;    /* Centers them */
+        width: 100%;
+        padding: 0;
     }
 
     /* Make sure the toggle button is visible */
@@ -303,5 +309,12 @@ li{
         display: block;
         cursor: pointer;
         font-size: 24px;
+    }
+}
+@media (max-width: 768px) {
+    #nav-links a {
+        color: white !important; /* Forces text to be visible */
+        display: block;          /* Makes the whole area clickable */
+        padding: 10px 0;         /* Adds space so they aren't squashed */
     }
 }
