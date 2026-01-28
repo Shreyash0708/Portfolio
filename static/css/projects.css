@@ -108,7 +108,7 @@ body {
 
 .nav{
     background-color: #000000;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     justify-content: space-around;
     padding: 14px 16px;
@@ -253,7 +253,12 @@ li{
 @media (max-width: 768px) {
     
 /* PASTE THIS INSIDE YOUR @media (max-width: 768px) SECTION */
-
+    #nav-links #inst {
+        display: flex;
+        flex-direction: row; /* Keep icons side-by-side, unlike the text links */
+        justify-content: center;
+        gap: 15px;
+    }
     #nav-links {
         /* 1. Positioning */
         display: none;      /* Hidden by default, JS toggles this */
@@ -284,6 +289,13 @@ li{
         font-size: 1.2rem;       /* Makes text bigger/easier to tap */
         display: block;
         text-decoration: none;
+    }
+    #nav-links .instant {
+        width: 30px;       /* Good touch size */
+        height: 30px;
+        background-color: white; /* Adds a white box behind transparent logos so they pop */
+        border-radius: 5px;      /* Rounds the corners slightly */
+        margin: 0 10px;          /* Adds space between icons */
     }
 
     /* Make sure the toggle button is visible */
